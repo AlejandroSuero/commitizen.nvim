@@ -1,6 +1,12 @@
 ---@diagnostic disable: undefined-field
 describe("[commitizen.nvim tests]", function()
   describe("setup", function()
+    it("should create user commands", function()
+      require("commitizen").setup({})
+      local user_commands = vim.api.nvim_get_commands({})
+      assert.not_nil(user_commands["Commitizen"])
+    end)
+
     it("should set up the plugin with the default config", function()
       require("commitizen").setup()
       local expected = require("commitizen.config").config
