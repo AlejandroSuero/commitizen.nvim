@@ -1,6 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
   "diagnostics": {
-    "unusedLocalExclude": ["_*"]
+    "unusedLocalExclude": ["_*"],
+    "globals": [
+      "describe",
+      "it",
+      "before_each",
+      "after_each",
+      "vim",
+      "jit",
+      "package",
+      "_G"
+    ],
+    "globalsRegex": ["^assert.*$", "^are.*$", "^same.*$", "^not_same.*$", "^not_nil.*$"]
   }
 }

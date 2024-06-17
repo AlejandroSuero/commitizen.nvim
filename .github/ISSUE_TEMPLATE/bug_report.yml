@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a problem with your_plugin.nvim
+description: Report a problem with commitizen.nvim
 title: "[Bug]: "
 labels:
   - bug
@@ -11,7 +11,7 @@ body:
         # Before reporting
 
         - Confirm that the problem is reproducible.
-        - Try using the [minimal reproduction template](https://github.com/your_github_user/your_plugin.nvim/blob/main/contrib/minimal.lua).
+        - Try using the [minimal reproduction template](https://github.com/AlejandroSuero/commitizen.nvim/blob/main/contrib/minimal.lua).
 
   - type: checkboxes
     id: pre-requisites
@@ -119,9 +119,9 @@ body:
 
         require("lazy").setup({
           {
-            "your_github_user/your_plugin.nvim",
+            "AlejandroSuero/commitizen.nvim",
             config = function()
-              require("your_plugin").setup()
+              require("commitizen").setup()
             end,
             lazy = false,
             enabled = true,

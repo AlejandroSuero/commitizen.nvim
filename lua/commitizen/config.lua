@@ -1,19 +1,11 @@
----@class PluginOptions
----@field some_option? boolean
----@field other_option? string
----@field bunch_of_options? table<string, string>
+---@type CommitizenOptions
 local default_config = {
-  some_option = true,
-  other_option = "foo",
-  bunch_of_options = {
-    foo = "bar",
-    bar = "baz",
-  },
+  confirm_before_commit = true,
 }
 
----@class PluginConfig
----@field config PluginOptions
----@field setup fun(opts: PluginOptions|nil)
+---@class CommitizenConfig
+---@field config CommitizenOptions
+---@field setup fun(opts: CommitizenOptions|nil)
 local M = {
   config = vim.deepcopy(default_config),
 }

@@ -1,0 +1,2 @@
+---@class CommitizenOptions
+---@field confirm_before_commit? boolean

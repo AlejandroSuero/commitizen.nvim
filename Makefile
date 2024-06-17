@@ -18,7 +18,7 @@ default_target: help
 
 test:
 	@$(call style_calls,"Running tests using nvim")
-	@nvim --headless --noplugin -u ./tests/minimal_init.lua -c "PlenaryBustedDirectory tests/your_plugin { minimal_init = './tests/minimal_init.lua'}"
+	@nvim --headless --noplugin -u ./tests/minimal_init.lua -c "PlenaryBustedDirectory tests/commitizen { minimal_init = './tests/minimal_init.lua'}"
 	@$(call style_calls,"Done!")
 
 .PHONY: test
