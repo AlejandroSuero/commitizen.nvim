@@ -17,10 +17,12 @@ describe("[commitizen.nvim tests]", function()
     it("should set up the plugin with a custom config", function()
       require("commitizen").setup({
         confirm_before_commit = false,
+        extra_types = { "foo" },
       })
       local expected = require("commitizen.config").config
 
       assert.is_false(expected.confirm_before_commit)
+      assert.are.same({ "foo" }, expected.extra_types)
     end)
   end)
 end)
