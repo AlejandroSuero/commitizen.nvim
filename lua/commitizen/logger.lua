@@ -4,6 +4,7 @@ local Logger = {}
 ---Creates a new log instance
 ---@param level LogLevel
 function Logger:new(level, msg)
+  local config = require("commitizen.config").config
   level = level:upper()
   if level == "OFF" then
     return
@@ -11,6 +12,11 @@ function Logger:new(level, msg)
   if not self.__notify_fmt then
     self.__notify_fmt = function(message)
       return string.format("[commitizen.nvim] %s", message)
+    end
+  end
+  if level == "DEBUG" then
+    if not config.debug then
+      return
     end
   end
   vim.api.nvim_notify(self.__notify_fmt(msg), vim.log.levels[level], { title = "Commitizen" })
