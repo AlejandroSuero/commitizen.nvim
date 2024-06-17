@@ -19,7 +19,7 @@ This Neovim plugin allows you to emulate the [commitizen](https://github.com/com
 ## TODO
 
 - [ ] Create UI to create a commit message.
-  - [ ] Select type of change (`feat:`, `fix:`, `docs:`, etc.).
+  - [x] Select type of change (`feat:`, `fix:`, `docs:`, etc.).
   - [ ] Select scope of change (e.g. `feat(scope):`).
   - [ ] Ask if is a breaking change.
     - [ ] If yes, ask if you want to use the `!` character (e.g. `feat(scope)!:`).
